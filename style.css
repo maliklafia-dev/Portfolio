@@ -29,6 +29,17 @@ input, button {
     --ABOUT-BG-COLOR: rgba(4, 6, 13, 0.9);
     --CONTACT-BG-COLOR: #3E8DE3;
     --FONT-COLOR: #FFF;
+
+    /* PADDING */
+    --PADDING-TB: 10px;
+    --PADDING-SIDE: 10px;
+
+    /* MARGING */   
+    --MARGING-TB: 10px;
+    --MARGIN-SIDE: 10px;
+
+    /* BORDERS */
+    --BORDER-CLASSIC: 1px solid black;
 }
 
 /* UTILITIES CLASSES */
@@ -45,6 +56,10 @@ input, button {
     left: -10000px;
 }
 /* || GENERAL STYLE */
+
+li {
+    list-style-type: none;
+}
 
 html {
     scroll-behavior: smooth;
@@ -79,14 +94,96 @@ a:hover, a:focus-visible {
     font-weight: bold;
 }
 
+.icon {
+    color: var(--ABOUT-BG-COLOR);
+    font-size: var(--FS);
+}
+
 /* || HEADER STYLE */
 /* Mobile first design from Iphone 6/7/8 to large screens*/
 header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 5vh;
+    width: 100vw;
+    padding: var(--PADDING-TB) var(--PADDING-SIDE);
+    margin-bottom: var(--MARGING-TB);
+    display: flex;
+    flex-flow: row nowrap;
     background-color: var(--HEADER-BG-COLOR);
-    color: var(--FONT-COLOR);
 }
 
 .header__img {
-    display: none;
+    display: none; /*hide the main image*/
 }
 
+/* animation hamburger button*/
+.header__nav-toggler {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    height: 30px;
+    width: 30px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+}
+
+.line {
+    position: absolute;
+    display: block;
+    background: var(--FONT-COLOR);
+    width: 100%;
+    height: 2px;
+    transition: transform 0.3s ease-out;
+    opacity: 0.1s ease-out;
+}
+.l1 {
+    transform: translateY(-10px);
+}
+.l3 {
+    transform: translateY(10px);
+}
+.header__nav-toggler.active .l1 {
+    transform: translateY(0px) rotate(135deg);
+}
+.header__nav-toggler.active .l2 {
+    opacity: 0;
+}
+.header__nav-toggler.active .l3 {
+    transform: translateY(0px) rotate(-135deg);
+}
+ /* nav styling */
+
+nav ul{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--HEADER-BG-COLOR);
+    transform: translateX(100%);
+    transition: transform 0.3s cubic-bezier(0.73, 0.11, 0.67, 0.84);
+ }
+
+ nav ul.active {
+    transform: translate(0);
+ }
+
+ nav ul a {
+    display: block;
+    margin: var(--MARGING-TB) 0;
+    font-size: var(--FS);
+ }
+
+.header__call, .header__nav-toggler{
+    margin-bottom: var(--MARGING-TB);
+}
