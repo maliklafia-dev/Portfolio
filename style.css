@@ -31,15 +31,17 @@ input, button {
     --FONT-COLOR: #FFF;
 
     /* PADDING */
-    --PADDING-TB: 10px;
-    --PADDING-SIDE: 10px;
+    --PADDING-TB: 2%;
+    --PADDING-SIDE: 2%;
 
     /* MARGING */   
-    --MARGING-TB: 10px;
-    --MARGIN-SIDE: 10px;
+    --MARGING-TB: 2%;
+    --MARGIN-SIDE: 2%;
 
     /* BORDERS */
-    --BORDER-CLASSIC: 1px solid black;
+    --BORDER-CLASSIC: 1px solid rgba(0, 0, 0, 0.1);
+    --BORDER-RADIUS: 10px;
+    --BOX-SHADOW: 5px 4px 4px rgba(0, 0, 0, 0.3);
 }
 
 /* UTILITIES CLASSES */
@@ -70,6 +72,10 @@ html {
 body {
     /* color: var(--FONT-COLOR); */
     min-height: 100vh;
+    overflow-x: hidden;
+    background-image: linear-gradient(var(--HEADER-BG-COLOR),
+    var(--ABOUT-BG-COLOR),
+    var(--CONTACT-BG-COLOR), var(--ABOUT-BG-COLOR));
 }
 
 h1, h2, h3 {
@@ -94,27 +100,47 @@ a:hover, a:focus-visible {
     font-weight: bold;
 }
 
+
+/* || BUTTONS STYLES */
+
+.btn {
+    width: 185px;
+    height: 45px;
+    margin-right: var(--MARGIN-SIDE);
+    padding: var(--PADDING-TB);
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--FONT-COLOR);
+    background-color: var(--HEADER-BG-COLOR);
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    border-radius: var(--BORDER-RADIUS);
+    box-shadow: var(--BOX-SHADOW);
+}
+
+/* || ICONS STYLES */
 .icon {
-    color: var(--ABOUT-BG-COLOR);
+    color: var(--FONT-COLOR);
     font-size: var(--FS);
 }
 
 /* || HEADER STYLE */
 /* Mobile first design from Iphone 6/7/8 to large screens*/
 header {
-    position: absolute;
+    position: sticky;
     top: 0;
     left: 0;
-    height: 5vh;
+    height: 8vh;
     width: 100vw;
     padding: var(--PADDING-TB) var(--PADDING-SIDE);
-    margin-bottom: var(--MARGING-TB);
     display: flex;
-    flex-flow: row nowrap;
+    align-items: center;
     background-color: var(--HEADER-BG-COLOR);
 }
 
-.header__img {
+.accueil__img {
     display: none; /*hide the main image*/
 }
 
@@ -142,6 +168,7 @@ header {
     height: 2px;
     transition: transform 0.3s ease-out;
     opacity: 0.1s ease-out;
+    /* margin-top: var(--MARGING-TB); */
 }
 .l1 {
     transform: translateY(-10px);
@@ -161,6 +188,7 @@ header {
  /* nav styling */
 
 nav ul{
+    position: absolute;
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -175,15 +203,41 @@ nav ul{
  }
 
  nav ul.active {
-    transform: translate(0);
+    transform: translate(0%);
  }
 
  nav ul a {
     display: block;
     margin: var(--MARGING-TB) 0;
     font-size: var(--FS);
+
  }
 
-.header__call, .header__nav-toggler{
+ /* || Accueil style */
+ .accueil {
+    position: relative;
+    color: var(--FONT-COLOR);
+    text-align: center;
+    padding-left: var(--PADDING-SIDE);
+    padding-right: var(--PADDING-SIDE);
+    height: 30vh;
+    width: 100%;
+    background-color: var(--HEADER-BG-COLOR);
+    background-image: url("images/wave.png");
+    background-repeat: no-repeat ;
+    background-position: bottom left;
+    background-size: 160% 80%;
     margin-bottom: var(--MARGING-TB);
 }
+
+.accueil p {
+    margin-bottom: var(--MARGING-TB);
+}
+
+.accueil__btn {
+    position: absolute;
+    bottom: 0;
+    right: 5;
+ }
+
+ 
