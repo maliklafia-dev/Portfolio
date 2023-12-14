@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,8 +15,8 @@
       <div class="header__call"><a href="tel:+33745308156"><i class="fa-solid fa-phone icon"></i></a></div>
       <nav class="header__nav">
         <ul class="header__ul">
-          <li><a href="#accueil">Accueil</a></li>
-          <li><a href="#aPropos">A propos</a></li>
+          <li><a href="#home">Accueil</a></li>
+          <li><a href="#about">A propos</a></li>
           <li><a href="#mesProjets">Mes projets</a></li>
           <li><a href="#contact">Contactez-moi</a></li>
         </ul>
@@ -28,7 +28,7 @@
       </button>
     </header>
     <main>
-      <section id="accueil" class="accueil">
+      <section id="home" class="accueil">
         <div class="accueil__hero">
           <p class="accueil__p nowrap">Bonjour !</p>
           <p class="accueil__p nowrap">Je suis <strong>Malik LAFIA</strong>.</p>
@@ -43,29 +43,34 @@
           <img class="accueil__img" title="Malik LAFIA" src="images/malik_lafia_banner.png" width="433" height="577" alt="Malik LAFIA" />
         </figure>
       </section>
-      <section id="aPropos">
+      <section id="about" class="about">
         <h3>A propos</h3>
+        <article class="about__info">
+          <h2 class="about__h2">Qui suis-je ?</h2>
+          <p class="about__p p1">
+            <ul class="identity">
+              <li>Nom: LAFIA</li>
+              <li>Prénoms: Malik Séro</li>
+              <li>Nationalité: Béninoise</li>
+            </ul>
+          </p>
+        </article>
+        <article class="about__info">
+          <hr>
+          <h2 class="about__h2">Ma formation ?</h2>
+          <p>
+            <ul class="formation">
+              <li>Consutant Développeur web & mobile à <a href="https://www.institut-f2i.fr/">Institut Européen F2I Paris</a>(2023-2025)</li>
+              <li>Bachelor en Informatique de Gestion option Génie Logiciel à <a href="https://www.groupeiam.com/">IAM Dakar</a> (2019-2022)</li>
+              <li>Baccalauréat au CSJM Le FAUCON Abomey-Calavi (2017-2018)</li>
+            </ul>
+          </p>
+        </article>
         <figure>
-          <img src="images/malik_lafia_about.png" title="Malik LAFIA" width="433" height="577" alt="Malik LAFIA">
+          <img class="about__img" src="images/malik_lafia_about.png" title="Malik LAFIA" width="433" height="577" alt="Malik LAFIA">
           <figcaption class="offscreen">photo à propo se de Malik LAFIA</figcaption>
         </figure>
-        <h2>Qui suis-je ?</h2>
-        <p>
-            <ul>
-                <li>Nom: LAFIA</li>
-                <li>Prénoms: Malik Séro</li>
-                <li>Nationalité: Béninoise</li>
-            </ul>
-        </p>
-        <h2>Ma formation ?</h2>
-        <p>
-            <ul>
-                <li>Consutant Développeur web & mobile à <a href="https://www.institut-f2i.fr/">Institut Européen F2I Paris</a>(2023-2025)</li>
-                <li>Bachelor en Informatique de Gestion option Génie Logiciel à <a href="https://www.groupeiam.com/">IAM Dakar</a> (2019-2022)</li>
-                <li>Baccalauréat au CSJM Le FAUCON Abomey-Calavi (2017-2018)</li>
-            </ul>
-        </p>
-        <button class="btn">Télécharger CV</button>
+        <button class="btn btn-about">Télécharger CV</button>
       </section>
       <section id="mesProjets">
         <h3>Mes projets</h3>

@@ -9,7 +9,7 @@
 
 img {
     display: block;
-    max-width: 25%;
+    max-width: 35%;
     height: auto;
 }
 
@@ -84,7 +84,7 @@ h1, h2, h3 {
 
 h3 {
     text-align: center;
-    margin-bottom: 1em;
+    /* margin-bottom: 1em; */
 }
 
 p {
@@ -105,7 +105,7 @@ a:hover, a:focus-visible {
 
 .btn {
     width: 185px;
-    height: 45px;
+    height: 40px;
     margin-right: var(--MARGIN-SIDE);
     padding: var(--PADDING-TB);
     text-align: center;
@@ -129,7 +129,7 @@ a:hover, a:focus-visible {
 /* || HEADER STYLE */
 /* Mobile first design from Iphone 6/7/8 to large screens*/
 header {
-    position: sticky;
+    position: relative;
     top: 0;
     left: 0;
     height: 8vh;
@@ -188,6 +188,7 @@ header {
  /* nav styling */
 
 nav ul{
+    z-index: 1;
     position: absolute;
     height: 100vh;
     width: 100vw;
@@ -213,7 +214,7 @@ nav ul{
 
  }
 
- /* || Accueil style */
+ /* || Home style */
  .accueil {
     position: relative;
     color: var(--FONT-COLOR);
@@ -227,7 +228,6 @@ nav ul{
     background-repeat: no-repeat ;
     background-position: bottom left;
     background-size: 160% 80%;
-    margin-bottom: var(--MARGING-TB);
 }
 
 .accueil p {
@@ -236,8 +236,53 @@ nav ul{
 
 .accueil__btn {
     position: absolute;
-    bottom: 0;
-    right: 5;
+    bottom: 1;
+    right: 0;
  }
 
- 
+ /* || About Style */
+
+ .about {
+    position: relative;
+    color: var(--FONT-COLOR);
+    background-color: var(--ABOUT-BG-COLOR);
+    min-height: 90vh;
+    display: flex;
+    flex-flow: column nowrap;
+    padding-left: var(--PADDING-SIDE);
+    padding-right: var(--PADDING-SIDE);
+}
+
+.about__h2 {
+    text-align: center;
+    margin-top: var(--MARGING-TB);
+}
+
+.formation, .identity{
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1em;
+}
+
+.formation {
+    margin-top: var(--MARGING-TB);
+    border-top: var(--BORDER-CLASSIC);
+}
+hr {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: var(--MARGING-TB);
+}
+
+.about__img {
+    position: absolute;
+    bottom: 0;
+    left: 5;
+}
+
+.btn-about {
+    position: absolute;
+    right: 0;
+    bottom: 50px;
+}
