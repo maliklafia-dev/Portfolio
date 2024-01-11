@@ -511,4 +511,12 @@ footer {
         margin: 0;
     }
     
+    /* About section styling */
+    .btn-about {
+        position: absolute;
+        right: 0;
+        bottom: 15%;
+    }
+
+    
 }
