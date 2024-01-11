@@ -20,6 +20,8 @@ input, button {
 /* || VARIABLES */
 
 :root{
+
+
     /* FONTS */
     --FF: "Poppins", sans-serif;
     --FS: clamp(1em, 2.2vh, 1.5em);
@@ -42,6 +44,8 @@ input, button {
     --BORDER-CLASSIC: 1px solid rgb(246, 242, 242);
     --BORDER-RADIUS: 10px;
     --BOX-SHADOW: 5px 4px 4px rgba(0, 0, 0, 0.3);
+
+
 }
 
 /* UTILITIES CLASSES */
@@ -73,12 +77,12 @@ body {
     /* color: var(--FONT-COLOR); */
     min-height: 100vh;
     width: 100%;
-    overflow-x: hidden;
     background-image: linear-gradient(var(--HEADER-BG-COLOR),
     var(--ABOUT-BG-COLOR),
     var(--CONTACT-BG-COLOR), var(--ABOUT-BG-COLOR));
     font-size: var(--FS);
     font-family: var(--FF);
+    overflow-x: hidden;
 }
 
 h1, h2, h3 {
@@ -462,3 +466,49 @@ footer {
     top: 5px;
 }
 
+/* || Design for tablet */
+ 
+@media screen and (min-width: 768px) {
+    /* header styling */
+    header {
+        position: relative;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        font-size: clamp(0.5em, 1.1vh, 0.75em);
+        padding-top: 0px;
+    }
+    
+    .header__nav-toggler {
+        display: none;
+    }
+    
+     /* nav styling */
+    
+    nav ul{
+        position: absolute;
+        top: 0;
+        display: flex;
+        flex-flow: row nowrap;
+        transform: translateX(0);
+        min-height: 100%;
+    }
+
+    .header__nav {
+        position: absolute;
+        left: 18%;
+        height: 100%;
+        min-width: 50%;
+        
+    }
+    
+    .header__call{
+        position: relative;
+    }
+
+     nav ul a {
+        display: inline;
+        margin: 0;
+    }
+    
+}
