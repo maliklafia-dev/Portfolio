@@ -360,7 +360,6 @@ hr {
     padding-right: var(--PADDING-SIDE);
     display: flex;
     flex-flow: column nowrap;
-    /* align-items: center; */
     gap: 1em;
 }
  /* Form styling*/
@@ -382,11 +381,8 @@ form {
 }
 
 #prenom {
-    position: absolute;
     grid-column: 2 / 3;
     grid-row: 1 / 2;
-    top: 0;
-    right: 0;
 }
 
 #email {
@@ -451,7 +447,9 @@ footer {
 .copyright {
     position: absolute;
     bottom: 1px;
-    left: 50px;
+    /* left: 50px; */
+    width: 100%;
+    text-align: center;
     font-size: smaller;
 }
 
@@ -518,5 +516,13 @@ footer {
         bottom: 15%;
     }
 
-    
+    /* Contact-me styling */
+    #contact p{
+        margin-left: 5%;
+    }
+
+    /*Footer styling */
+    .socials {
+        margin-left: 1%;
+    }
 }
