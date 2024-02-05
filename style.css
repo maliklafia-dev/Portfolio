@@ -9,7 +9,7 @@
 
 img {
     display: block;
-    max-width: 35%;
+    max-width: 30%;
     height: auto;
 }
 
@@ -25,6 +25,7 @@ input, button {
     /* FONTS */
     --FF: "Poppins", sans-serif;
     --FS: clamp(1em, 2.2vh, 1.5em);
+    --FW: 300;
 
     /* COLORS */
     --HEADER-BG-COLOR: #143AA2;
@@ -69,6 +70,7 @@ li {
 
 html {
     width: 100%;
+    height: 100vh;
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
@@ -235,7 +237,7 @@ nav ul{
     text-align: center;
     padding-left: var(--PADDING-SIDE);
     padding-right: var(--PADDING-SIDE);
-    min-height: 30vh;
+    height: 30vh;
     min-width: 99%;
     background-color: var(--HEADER-BG-COLOR);
     background-image: url("images/wave.png");
@@ -246,11 +248,21 @@ nav ul{
 
 .accueil p {
     margin-bottom: var(--MARGING-TB);
+    font-weight: 500;
+}
+
+.accueil p:nth-child(1) {
+    margin-bottom: 20px;
+}
+
+strong {
+    font-size: 1.6em;
+    font-weight: var(--FW);
 }
 
 .accueil__btn {
     position: absolute;
-    bottom: 1;
+    bottom: 1%;
     right: 0;
  }
 
@@ -260,7 +272,7 @@ nav ul{
     position: relative;
     color: var(--FONT-COLOR);
     background-color: var(--ABOUT-BG-COLOR);
-    min-height: 90vh;
+    min-height: 88vh;
     display: flex;
     flex-flow: column nowrap;
     padding-left: var(--PADDING-SIDE);
@@ -289,12 +301,13 @@ hr {
 .about__img {
     position: absolute;
     bottom: 0;
+    max-width: 28%;
     left: 5;
 }
 
 .btn-about {
     position: absolute;
-    right: 0;
+    right: 4%;
     bottom: 50px;
 }
 
@@ -466,7 +479,7 @@ footer {
 
 /* || Design for tablet */
  
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1023px){
     /* header styling */
     header {
         position: relative;
@@ -508,12 +521,23 @@ footer {
         display: inline;
         margin: 0;
     }
+    .accueil__btn {
+        position: absolute;
+        bottom: 1%;
+        right: 2%;
+    }
     
     /* About section styling */
     .btn-about {
         position: absolute;
-        right: 0;
         bottom: 15%;
+    }
+
+    .about {
+        min-height: 85vh;
+    }
+    .about__img {
+        max-width: 25%;
     }
 
     /* Contact-me styling */
@@ -525,4 +549,627 @@ footer {
     .socials {
         margin-left: 1%;
     }
+
+    #message {
+        height: 225px;
+    }
+}
+
+/* || Design for PC */
+@media screen and (min-width: 1024px)  and (max-width: 1200px) {
+    /* Header and accueil section designing*/
+
+        /* header styling */
+        header {
+            position: relative;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            font-size: clamp(0.5em, 1.1vh, 0.75em);
+            padding-top: 0px;
+        }
+        
+        .header__nav-toggler {
+            display: none;
+        }
+        
+         /* nav styling */
+        
+        nav ul{
+            position: absolute;
+            top: 0;
+            display: flex;
+            flex-flow: row nowrap;
+            transform: translateX(0);
+            min-height: 100%;
+        }
+    
+        .header__nav {
+            position: absolute;
+            left: 18%;
+            height: 90%;
+            min-width: 50%;
+            
+        }
+        
+
+    .accueil {
+        position: relative;
+        color: var(--FONT-COLOR);
+        min-height: 40vh;
+        width: 100%;
+        background-size: 106% 60%;
+    }
+
+    .accueil__img {
+        display: block; /*show the main image*/
+        float: right;
+        position: absolute;
+        max-width: 20%;
+        bottom: 0px;
+        right: 3%;
+        max-width: 27%;
+    }
+
+    .header__call {
+        display: none;
+    }
+
+    .accueil__hero {
+        position: absolute;
+        left: 15%;
+        top: 3%;
+        text-align: justify;
+        min-width: 390px;
+        min-height: 320px;
+        font-size: clamp(1.2em, 2.2vh, 1.5em);
+    }
+  
+    .accueil__btn {
+        position: absolute;
+        bottom: 0%;
+        right: 0%; 
+        margin: var(--MARGING-TB);
+    }
+    
+    /*  || About styling */
+    .about {
+        display: flex;
+        flex-flow: row;
+        padding-left: var(--PADDING-SIDE);
+        padding-right: var(--PADDING-SIDE);
+        min-height: 40vh;
+        min-width: 100%;
+    }
+
+    .about h3 {
+        position: absolute;
+        top: 0;
+        left: 50%;
+    }
+    
+    .about__h2 {
+        text-align: left;
+    }
+
+    .about__info1 {
+        position: absolute;
+        top: 10%;
+        left: 19%;
+        text-align: left;
+    }
+
+    .about__info2 {
+        position: absolute;
+        width: 550px;
+        top: 10%;
+        right: 0%;
+    }
+    
+    hr {
+        position: absolute;
+        right: 80%;
+        top: 50%;
+        width: 50%;
+        opacity: 0.5;
+        transform: rotate(90deg);
+    }
+    
+    .about__img {
+        position: absolute;
+        top: 10%;
+        left: 0;
+        max-width: 18%;
+    }    
+    .btn-about {
+        position: absolute;
+        right: 0%;
+        bottom: 2%;
+    }
+
+    /* || Contact-me styling */
+    #message {
+        min-height: 145px;
+    }
+    
+}
+
+
+/* || LAPTOP LARGE 1440px */
+@media screen and (min-width: 1201px) and (max-width: 1439px) {
+    /* header styling */
+    header {
+        position: relative;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        font-size: clamp(0.5em, 1.1vh, 0.75em);
+        padding-top: 0px;
+    }
+
+    .header__nav-toggler {
+        display: none;
+    }
+
+    /* nav styling */
+
+    nav ul{
+        position: absolute;
+        top: 0;
+        display: flex;
+        flex-flow: row nowrap;
+        transform: translateX(0);
+        min-height: 100%;
+    }
+
+    .header__nav {
+        position: absolute;
+        left: 18%;
+        height: 90%;
+        min-width: 50%;
+        
+    }
+
+
+    .accueil {
+    position: relative;
+    color: var(--FONT-COLOR);
+    min-height: 40vh;
+    width: 100%;
+    background-size: 106% 60%;
+    }
+
+    .accueil__img {
+    display: block; /*show the main image*/
+    float: right;
+    position: absolute;
+    max-width: 20%;
+    bottom: 0px;
+    right: 10%;
+    max-width: 24%;
+    }
+
+    .header__call {
+    display: none;
+    }
+
+    .accueil__hero {
+    position: absolute;
+    left: 15%;
+    top: 3%;
+    text-align: justify;
+    min-width: 390px;
+    min-height: 320px;
+    font-size: clamp(1.2em, 2.2vh, 1.5em);
+    }
+
+    .accueil__btn {
+    position: absolute;
+    bottom: 0%;
+    right: 0%; 
+    margin: var(--MARGING-TB);
+    }
+
+    /*  || About styling */
+    .about {
+    display: flex;
+    flex-flow: row;
+    padding-left: var(--PADDING-SIDE);
+    padding-right: var(--PADDING-SIDE);
+    min-height: 40vh;
+    min-width: 100%;
+    }
+
+    .about h3 {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    }
+
+    .about__h2 {
+    text-align: left;
+    }
+
+    .about__info1 {
+    position: absolute;
+    top: 10%;
+    left: 19%;
+    text-align: left;
+    }
+
+    .about__info2 {
+    position: absolute;
+    width: 550px;
+    top: 10%;
+    right: 0%;
+    }
+
+    hr {
+    position: absolute;
+    right: 80%;
+    top: 50%;
+    width: 50%;
+    opacity: 0.5;
+    transform: rotate(90deg);
+    }
+
+    .about__img {
+    position: absolute;
+    top: 10%;
+    left: 0;
+    max-width: 18%;
+    }    
+    .btn-about {
+    position: absolute;
+    right: 0%;
+    bottom: 2%;
+    }
+
+    /* || Contact-me styling */
+    #contact {
+        min-height: 50vh;
+        max-width: 100%;
+    }
+   /* Form styling*/
+   form {
+        min-width: 60%;
+        max-height: 42vh;
+        position: absolute;
+        right: 10%;
+        margin-bottom: 5%;
+        margin-top: 5%;
+    }
+
+    .btn-contact {
+        bottom: 2%;
+    }
+
+    #message {
+        height: 130px;
+    }
+    #contact p{
+        position: absolute;
+        left: 2%;
+        margin-top: 20%;
+    }
+
+
+}
+/* || LAPTOP LARGE 1440px */
+@media screen and (min-width: 1440px) and (max-width: 1919px) {
+     /* header styling */
+     header {
+        position: relative;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        font-size: clamp(1em, 1.1vh, 2em);
+        padding-top: 0px;
+    }
+
+    .header__nav-toggler {
+        display: none;
+    }
+
+    /* nav styling */
+
+    nav ul{
+        position: absolute;
+        top: 0;
+        display: flex;
+        flex-flow: row nowrap;
+        transform: translateX(0);
+        min-height: 100%;
+    }
+
+    .header__nav {
+        position: absolute;
+        left: 21%;
+        height: 90%;
+        min-width: 50%;
+        
+    }
+
+    .accueil {
+        position: relative;
+        color: var(--FONT-COLOR);
+        min-height: 40vh;
+        width: 100%;
+        background-size: 106% 80%;
+    }
+
+    .accueil__img {
+        display: block; /*show the main image*/
+        float: right;
+        position: absolute;
+        max-width: 20%;
+        bottom: 0px;
+        right: 10%;
+        max-width: 20%;
+    }
+
+    .header__call {
+    display: none;
+    }
+
+    .accueil__hero {
+        position: absolute;
+        left: 20%;
+        top: 3%;
+        text-align: justify;
+        min-width: 390px;
+        min-height: 320px;
+        font-size: clamp(1.2em, 2.2vh, 1.5em);
+    }
+
+    .accueil__btn {
+    position: absolute;
+    bottom: 0%;
+    right: 0%; 
+    margin: var(--MARGING-TB);
+    }
+
+    /*  || About styling */
+    .about {
+        display: flex;
+        flex-flow: row;
+        padding-left: var(--PADDING-SIDE);
+        padding-right: var(--PADDING-SIDE);
+        min-height: 50vh;
+        min-width: 100%;
+    }
+
+    .about h3 {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    }
+
+    .about__h2 {
+        text-align: left;
+    }
+
+    .about__info1 {
+        position: absolute;
+        top: 10%;
+        left: 20%;
+        text-align: left;
+    }
+
+    .about__info2 {
+        position: absolute;
+        width: 550px;
+        top: 10%;
+        right: 6%;
+    }
+
+    hr {
+    position: absolute;
+    right: 80%;
+    top: 50%;
+    width: 50%;
+    opacity: 0.5;
+    transform: rotate(90deg);
+    }
+
+    .about__img {
+    position: absolute;
+    top: 10%;
+    left: 0;
+    max-width: 18%;
+    }
+
+    .btn-about {
+        position: absolute;
+        right: 0%;
+        bottom: 3%;
+    }
+
+    /* || Contact-me styling */
+    #contact {
+        min-height: 55vh;
+        max-width: 100%;
+    }
+   /* Form styling*/
+   form {
+        min-width: 50%;
+        max-height: 40vh;
+        position: absolute;
+        right: 15%;
+        margin-top: 5%;
+    }
+
+    .btn-contact {
+        bottom: 2%;
+    }
+
+    #message {
+        height: 140px;
+    }
+    #contact p{
+        position: absolute;
+        left: 8%;
+        margin-top: 15%;
+    }
+
+}
+
+@media screen and (min-width: 1920px) and (max-width: 2560px) {
+         /* header styling */
+         header {
+            position: relative;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            font-size: clamp(1em, 1.1vh, 2em);
+            padding-top: 0px;
+        }
+    
+        .header__nav-toggler {
+            display: none;
+        }
+    
+        /* nav styling */
+    
+        nav ul{
+            position: absolute;
+            top: 0;
+            display: flex;
+            flex-flow: row nowrap;
+            transform: translateX(0);
+            min-height: 100%;
+        }
+    
+        .header__nav {
+            position: absolute;
+            left: 21%;
+            height: 90%;
+            min-width: 50%;
+            
+        }
+    
+        .accueil {
+            position: relative;
+            color: var(--FONT-COLOR);
+            min-height: 45vh;
+            width: 100%;
+            background-size: 106% 80%;
+        }
+    
+        .accueil__img {
+            display: block; /*show the main image*/
+            float: right;
+            position: absolute;
+            max-width: 20%;
+            bottom: 0px;
+            right: 10%;
+            max-width: 20%;
+        }
+    
+        .header__call {
+        display: none;
+        }
+    
+        .accueil__hero {
+            position: absolute;
+            left: 20%;
+            top: 3%;
+            text-align: justify;
+            min-width: 400px;
+            min-height: 450px;
+            font-size: clamp(1.3em, 2.2vh, 1.5em);
+        }
+    
+        .accueil__btn {
+            position: absolute;
+            bottom: 0%;
+            right: 0%; 
+            margin: var(--MARGING-TB);
+        }
+    
+        /*  || About styling */
+        .about {
+            display: flex;
+            flex-flow: row;
+            padding-left: var(--PADDING-SIDE);
+            padding-right: var(--PADDING-SIDE);
+            min-height: 50vh;
+            min-width: 100%;
+        }
+    
+        .about h3 {
+            position: absolute;
+            top: 0;
+            left: 50%;
+        }
+    
+        .about__h2 {
+            text-align: left;
+        }
+    
+        .about__info1 {
+            position: absolute;
+            top: 10%;
+            left: 25%;
+            text-align: left;
+        }
+    
+        .about__info2 {
+            position: absolute;
+            width: 550px;
+            top: 10%;
+            right: 15%;
+        }
+    
+        hr {
+            position: absolute;
+            right: 100%;
+            top: 50%;
+            width: 50%;
+            opacity: 0.5;
+            transform: rotate(90deg);
+        }
+    
+        .about__img {
+            position: absolute;
+            top: 10%;
+            bottom: 0;
+            left: 0;
+            max-width: 18%;
+        }
+    
+        .btn-about {
+            position: absolute;
+            right: 10%;
+            bottom: 5%;
+        }
+    
+
+        /* || Contact-me styling */
+        #contact {
+            min-height: 55vh;
+            max-width: 100%;
+        }
+       /* Form styling*/
+       form {
+            min-width: 45%;
+            max-height: 40vh;
+            position: absolute;
+            right: 25%;
+            margin-top: 5%;
+        }
+    
+        .btn-contact {
+            bottom: 2%;
+        }
+    
+        #message {
+            height: 180px;
+        }
+        #contact p{
+            position: absolute;
+            left: 10%;
+            margin-top: 15%;
+        }
+
 }
