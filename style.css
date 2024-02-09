@@ -252,6 +252,7 @@ nav ul{
 
 .accueil__hero {
     display: inline-block;
+    transition: all 3s ease;
 }
 
 .accueil p {
@@ -275,6 +276,7 @@ strong {
     bottom: 1%;
     right: 0;
  }
+
 
  /* || About Style */
 
@@ -314,6 +316,7 @@ hr {
     max-width: 28%;
     left: 5;
 }
+
 
 .btn-about {
     position: absolute;
@@ -504,6 +507,8 @@ footer {
     top: 5px;
 }
 
+/* ||Animations */
+
 /*reveal elements setting*/
 .reveal {
     position: relative;
@@ -516,6 +521,38 @@ footer {
     opacity: 1;
 }
 
+.growth {
+    /*adding animation on second image*/
+    animation: growth 2.2s ease-in-out infinite alternate;
+}
+
+@keyframes growth {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.slide-left {
+    animation: slide-left 3s ease;
+}
+
+@keyframes slide-left {
+    0% {
+        transform: translateX(-1000px);
+        transition: all 1s ease;
+    }
+    100%{
+        transform: scale(1);
+        transition: all 3s ease;
+
+    }
+}
 
 /* || Design for very small mobile screen */
 @media screen and (min-width: 320px) and (max-width: 374px) {
