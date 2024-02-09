@@ -25,7 +25,7 @@ input, button {
     /* FONTS */
     --FF: "Poppins", sans-serif;
     --FS: clamp(1em, 2.2vh, 1.5em);
-    --FW: 300;
+    --FW: 900;
 
     /* COLORS */
     --HEADER-BG-COLOR: #143AA2;
@@ -45,6 +45,9 @@ input, button {
     --BORDER-CLASSIC: 1px solid rgb(246, 242, 242);
     --BORDER-RADIUS: 10px;
     --BOX-SHADOW: 5px 4px 4px rgba(0, 0, 0, 0.3);
+
+    /* GRID-GAP */
+    --GAP: 10px;
 
 
 }
@@ -237,7 +240,7 @@ nav ul{
     text-align: center;
     padding-left: var(--PADDING-SIDE);
     padding-right: var(--PADDING-SIDE);
-    height: 30vh;
+    height: 34vh;
     min-width: 99%;
     background-color: var(--HEADER-BG-COLOR);
     background-image: url("images/wave.png");
@@ -246,13 +249,20 @@ nav ul{
     background-size: 160% 80%;
 }
 
+
+.accueil__hero {
+    display: inline-block;
+}
+
 .accueil p {
     margin-bottom: var(--MARGING-TB);
     font-weight: 500;
 }
 
+
 .accueil p:nth-child(1) {
     margin-bottom: 20px;
+    font-size: larger;
 }
 
 strong {
@@ -272,7 +282,7 @@ strong {
     position: relative;
     color: var(--FONT-COLOR);
     background-color: var(--ABOUT-BG-COLOR);
-    min-height: 88vh;
+    min-height: 82vh;
     display: flex;
     flex-flow: column nowrap;
     padding-left: var(--PADDING-SIDE);
@@ -313,23 +323,40 @@ hr {
 
 /* || Mes Projets Style */
  #mesProjets {
+    position: relative;
     color: var(--FONT-COLOR);
     background-color: var(--HEADER-BG-COLOR);
-    min-height: 80vh;
-    padding-left: var(--PADDING-SIDE);
-    padding-right: var(--PADDING-SIDE);
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
+    min-height: 60vh;
+}
 
+/*scroll horizontal setting*/
+.media-scroller {
+    margin-top: var(--MARGING-TB);
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 84%;
+    gap: var(--GAP);
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+   padding: 0 var(--PADDING-SIDE) var(--PADDING-SIDE) var(--PADDING-TB);
  }
+
+
+.snaps-inline {
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: var(--PADDING-SIDE);
+    
+}
+
+.snaps-inline > * {
+    scroll-snap-align: center;
+}
 
  .card {
     border: none;
     border-radius: var(--BORDER-RADIUS);
-    min-height: 75vh;
-    width: min(90%, 600px);
-    margin-top: var(--MARGING-TB);
+    height: min(430px, 600px);
+    width: min(100%, 600px);
     background-color: rgba(217, 217, 217, 0.13);
     display: flex;
     flex-flow: column nowrap;
@@ -342,7 +369,7 @@ hr {
 
  #video_demo {
     border: var(--BORDER-CLASSIC);
-    min-height: 300px;
+    min-height: 200px;
     width: min(80%, 400px);
     margin-left: auto;
     margin-right: auto;
@@ -477,6 +504,32 @@ footer {
     top: 5px;
 }
 
+/* || Design for very small mobile screen */
+@media screen and (min-width: 320px) and (max-width: 374px) {
+    .siteMap {
+        position: absolute;
+        display: flex;
+        flex-flow: row-reverse wrap;
+        top: 40%;
+        left: 20%;
+        font-size: clamp(0.9em, 1.1vh, 0.75em);
+        gap: 5px;
+    }
+    /* || Mes Projets Style */
+ #mesProjets {
+    min-height: 50vh;
+}
+
+ .card {
+    height: min(375px, 600px);
+    width: min(100%, 600px);
+    padding-bottom: var(--PADDING-TB);
+ }
+    
+}
+
+
+
 /* || Design for tablet */
  
 @media screen and (min-width: 768px) and (max-width: 1023px){
@@ -539,6 +592,19 @@ footer {
     .about__img {
         max-width: 25%;
     }
+   
+    /* || Mes Projets Style */
+    #mesProjets {
+        min-height: 50vh;
+    }
+
+    .media-scroller {
+        grid-auto-columns: 78%;
+    }
+
+    .card {
+        height: min(480px, 600px);
+    }
 
     /* Contact-me styling */
     #contact p{
@@ -556,7 +622,7 @@ footer {
 }
 
 /* || Design for PC */
-@media screen and (min-width: 1024px)  and (max-width: 1200px) {
+@media screen and (min-width: 1024px)  and (max-width: 1999px) {
     /* Header and accueil section designing*/
 
         /* header styling */
@@ -592,11 +658,10 @@ footer {
             
         }
         
-
     .accueil {
         position: relative;
         color: var(--FONT-COLOR);
-        min-height: 40vh;
+        min-height: 35vh;
         width: 100%;
         background-size: 106% 60%;
     }
@@ -608,7 +673,7 @@ footer {
         max-width: 20%;
         bottom: 0px;
         right: 3%;
-        max-width: 27%;
+        max-width: 23.5%;
     }
 
     .header__call {
@@ -621,10 +686,10 @@ footer {
         top: 3%;
         text-align: justify;
         min-width: 390px;
-        min-height: 320px;
-        font-size: clamp(1.2em, 2.2vh, 1.5em);
+        height: min(280px, 285px);
+        font-size: clamp(0.6em, 2.2vh, 1.5em);
     }
-  
+    
     .accueil__btn {
         position: absolute;
         bottom: 0%;
@@ -633,59 +698,33 @@ footer {
     }
     
     /*  || About styling */
-    .about {
-        display: flex;
-        flex-flow: row;
-        padding-left: var(--PADDING-SIDE);
-        padding-right: var(--PADDING-SIDE);
-        min-height: 40vh;
-        min-width: 100%;
-    }
-
-    .about h3 {
-        position: absolute;
-        top: 0;
-        left: 50%;
-    }
-    
-    .about__h2 {
-        text-align: left;
-    }
-
-    .about__info1 {
-        position: absolute;
-        top: 10%;
-        left: 19%;
-        text-align: left;
-    }
-
-    .about__info2 {
-        position: absolute;
-        width: 550px;
-        top: 10%;
-        right: 0%;
-    }
-    
-    hr {
-        position: absolute;
-        right: 80%;
-        top: 50%;
-        width: 50%;
-        opacity: 0.5;
-        transform: rotate(90deg);
-    }
-    
     .about__img {
-        position: absolute;
-        top: 10%;
-        left: 0;
         max-width: 18%;
-    }    
+    }
+
+    .about {
+        min-height: 78vh;
+    }
+
     .btn-about {
         position: absolute;
-        right: 0%;
-        bottom: 2%;
+        bottom: 17%;
     }
+    /* || Mes Projets Style */
+    #mesProjets {
+        min-height: 55vh;
+    }
+
+    /*scroll horizontal setting*/
+    .media-scroller {
+        grid-auto-columns: 64%;
+    }
+
+    .card {
+        height: min(500px, 600px);
+        width: min(100%, 600px);
+    }
+
 
     /* || Contact-me styling */
     #message {
@@ -696,7 +735,7 @@ footer {
 
 
 /* || LAPTOP LARGE 1440px */
-@media screen and (min-width: 1201px) and (max-width: 1439px) {
+@media screen and (min-width: 1200px) and (max-width: 1439px) {
     /* header styling */
     header {
         position: relative;
@@ -732,97 +771,97 @@ footer {
 
 
     .accueil {
-    position: relative;
-    color: var(--FONT-COLOR);
-    min-height: 40vh;
-    width: 100%;
-    background-size: 106% 60%;
+        position: relative;
+        color: var(--FONT-COLOR);
+        min-height: 40vh;
+        width: 100%;
+        background-size: 106% 60%;
     }
 
     .accueil__img {
-    display: block; /*show the main image*/
-    float: right;
-    position: absolute;
-    max-width: 20%;
-    bottom: 0px;
-    right: 10%;
-    max-width: 24%;
+        display: block; /*show the main image*/
+        float: right;
+        position: absolute;
+        max-width: 20%;
+        bottom: 0px;
+        right: 10%;
+        max-width: 23%;
     }
 
     .header__call {
-    display: none;
+        display: none;
     }
 
     .accueil__hero {
-    position: absolute;
-    left: 15%;
-    top: 3%;
-    text-align: justify;
-    min-width: 390px;
-    min-height: 320px;
-    font-size: clamp(1.2em, 2.2vh, 1.5em);
+        position: absolute;
+        left: 15%;
+        top: 3%;
+        text-align: justify;
+        min-width: 390px;
+        min-height: 320px;
+        font-size: clamp(1.2em, 2.2vh, 1.5em);
     }
 
     .accueil__btn {
-    position: absolute;
-    bottom: 0%;
-    right: 0%; 
-    margin: var(--MARGING-TB);
+        position: absolute;
+        bottom: 0%;
+        right: 0%; 
+        margin: var(--MARGING-TB);
     }
 
     /*  || About styling */
     .about {
-    display: flex;
-    flex-flow: row;
-    padding-left: var(--PADDING-SIDE);
-    padding-right: var(--PADDING-SIDE);
-    min-height: 40vh;
-    min-width: 100%;
+        display: flex;
+        flex-flow: row;
+        padding-left: var(--PADDING-SIDE);
+        padding-right: var(--PADDING-SIDE);
+        min-height: 40vh;
+        min-width: 100%;
     }
 
     .about h3 {
-    position: absolute;
-    top: 0;
-    left: 50%;
+        position: absolute;
+        top: 0;
+        left: 50%;
     }
 
     .about__h2 {
-    text-align: left;
+        text-align: left;
     }
 
     .about__info1 {
-    position: absolute;
-    top: 10%;
-    left: 19%;
-    text-align: left;
+        position: absolute;
+        top: 10%;
+        left: 19%;
+        text-align: left;
     }
 
     .about__info2 {
-    position: absolute;
-    width: 550px;
-    top: 10%;
-    right: 0%;
+        position: absolute;
+        width: 550px;
+        top: 10%;
+        right: 0%;
     }
 
     hr {
-    position: absolute;
-    right: 80%;
-    top: 50%;
-    width: 50%;
-    opacity: 0.5;
-    transform: rotate(90deg);
+        position: absolute;
+        right: 80%;
+        top: 50%;
+        width: 50%;
+        opacity: 0.5;
+        transform: rotate(90deg);
     }
 
     .about__img {
-    position: absolute;
-    top: 10%;
-    left: 0;
-    max-width: 18%;
+        position: absolute;
+        top: 10%;
+        left: 0;
+        max-width: 19%;
     }    
     .btn-about {
-    position: absolute;
-    right: 0%;
-    bottom: 2%;
+        position: absolute;
+        right: 0%;
+        bottom: 2%;
     }
 
     /* || Contact-me styling */
@@ -985,6 +1024,19 @@ footer {
         bottom: 3%;
     }
 
+    #mesProjets {
+        min-height: 50vh;
+    }
+
+    .media-scroller {
+        grid-auto-columns: 50%;
+    }
+
+    .card {
+        height: min(480px, 600px);
+    }
+
+
     /* || Contact-me styling */
     #contact {
         min-height: 55vh;
@@ -1135,7 +1187,7 @@ footer {
             top: 10%;
             bottom: 0;
             left: 0;
-            max-width: 18%;
+            max-width: 19%;
         }
     
         .btn-about {
@@ -1143,7 +1195,19 @@ footer {
             right: 10%;
             bottom: 5%;
         }
+        
+        /*mES PROJETS STYLING   */
+        #mesProjets {
+            min-height: 50vh;
+        }
     
+        .media-scroller {
+            grid-auto-columns: 38%;
+        }
+    
+        .card {
+            height: min(480px, 600px);
+        }
 
         /* || Contact-me styling */
         #contact {
