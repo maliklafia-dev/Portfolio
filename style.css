@@ -82,7 +82,7 @@ body {
     /* color: var(--FONT-COLOR); */
     min-height: 100vh;
     width: 100%;
-    background-image: linear-gradient(var(--HEADER-BG-COLOR),
+    background-image: linear-gradient(0deg,var(--HEADER-BG-COLOR),
     var(--ABOUT-BG-COLOR),
     var(--CONTACT-BG-COLOR), var(--ABOUT-BG-COLOR));
     font-size: var(--FS);
@@ -503,6 +503,19 @@ footer {
     position: absolute;
     top: 5px;
 }
+
+/*reveal elements setting*/
+.reveal {
+    position: relative;
+    transform: translateX(-50px);
+    opacity: 0;
+    transition: all 2.2s ease;
+}
+.reveal.active {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
 
 /* || Design for very small mobile screen */
 @media screen and (min-width: 320px) and (max-width: 374px) {
@@ -1187,7 +1200,7 @@ footer {
             top: 10%;
             bottom: 0;
             left: 0;
-            max-width: 19%;
+            max-width: 18.3%;
         }
     
         .btn-about {

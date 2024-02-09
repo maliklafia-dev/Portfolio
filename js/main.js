@@ -27,3 +27,25 @@ links.forEach((link) => {
 });
 
 /*------------------------------------------- */
+//scroll reveal elements animation
+window.addEventListener("scroll", reveal);
+
+function reveal() {
+  let reveals = document.querySelectorAll(".reveal"); //elements to reveal
+
+  for (var i = 0; i < reveals.length; i++) {
+    //number of elements to reveal
+    var windowHeight = window.innerHeight; //take the height of current element
+    var revealTop = reveals[i].getBoundingClientRect().top;
+    var revealPoint = 50;
+
+    if (revealTop < windowHeight - revealPoint) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
+}
+
+/*------------------------------------------- */
+//images hero reveal animation
