@@ -7,133 +7,133 @@
     integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" 
     crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css" />
-    <script src="js/main.js" defer></script>
+    <script src="index.js" defer></script>
     <title>Malik LAFIA</title>
   </head>
   <body>
-    <header class="header">
-      <div class="header__call"><a href="tel:+33745308156"><i class="fa-solid fa-phone icon"></i></a></div>
-      <nav class="header__nav">
-        <ul class="header__ul">
-          <li><a href="#home">Accueil</a></li>
-          <li><a href="#about">A propos</a></li>
-          <li><a href="#mesProjets">Mes projets</a></li>
-          <li><a href="#contact">Contactez-moi</a></li>
-        </ul>
-      </nav>
-      <button type="button" aria-label="toggle curtain navigation" class="header__nav-toggler">
-        <span class="line l1"></span>
-        <span class="line l2"></span>
-        <span class="line l3"></span>
-      </button>
-    </header>
-    <main>
-      <section id="home" class="accueil">
-        <div class="accueil__hero slide-left">
-          <p class="accueil__p nowrap animText">Bonjour !</p>
-          <p class="accueil__p nowrap">Je suis <strong>Malik LAFIA</strong>.</p>
-          <p class="accueil__p nowrap">Passionné par l'UI/UX design, </p>
-          <p class="accueil__p nowrap">le devéloppement web et mobile </p>
-          <p class="accueil__p nowrap">depuis bientôt 4 ans.</p>
-          
-          <button class="btn  accueil__btn" type="button"><a href="cv_malik_lafia.pdf" download>Télécharger CV</a></button>
-        </div>
-        <figure class="accueil__figure">
-          <figcaption class="offscreen">photo de Malik LAFIA</figcaption>
-          <img class="accueil__img growth" title="Malik LAFIA" src="images/malik_lafia_banner.png" width="433" height="577" alt="Malik LAFIA" />
-        </figure>
-      </section>
-      <section id="about" class="about">
-        <h3>A propos</h3>
-        <article class="about__info1">
-          <h2 class="about__h2">Qui suis-je ?</h2>
-          <p>
-            <ul class="identity">
-              <li>Nom: LAFIA</li>
-              <li>Prénoms: Malik Séro</li>
-              <li>Nationalité: Béninoise</li>
-            </ul>
-          </p>
-        </article>
-        <article class="about__info2">
-          <hr>
-          <h2 class="about__h2">Ma formation ?</h2>
-          <p>
-            <ul class="formation">
-              <li>Consultant Développeur web & mobile à <a href="https://www.institut-f2i.fr/">Institut Européen F2I Paris</a>(2023-2025)</li>
-              <li>Bachelor en Informatique de Gestion option Génie Logiciel à <a href="https://www.groupeiam.com/">IAM Dakar</a> (2019-2022)</li>
-              <li>Baccalauréat au CSJM Le FAUCON Abomey-Calavi (2017-2018)</li>
-            </ul>
-          </p>
-        </article>
-        <figure>
-          <img class="about__img growth" src="images/malik_lafia_about.png" title="Malik LAFIA" width="433" height="577" alt="Malik LAFIA">
-          <figcaption class="offscreen">photo à propo se de Malik LAFIA</figcaption>
-        </figure>
-        <button class="btn btn-about"><a href="cv_malik_lafia.pdf" download>Télécharger CV</a></button>
-      </section>
-      <section id="mesProjets" class="reveal">
-        <h3>Mes projets</h3>
-        <div class="media-scroller snaps-inline">
-          <div class="card">
-              <div id="video_demo"><video src=""></video></div>
-              <h4 id="titreProjet">Titre du projet</h4>
-              <p id="description">Description Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-              <button class="btn btn-mesProjets">En savoir plus</button>
-          </div>
-          <div class="card">
-              <div id="video_demo"><video src=""></video></div>
-              <h4 id="titreProjet">Titre du projet</h4>
-              <p id="description">Description Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-              <button class="btn btn-mesProjets">En savoir plus</button>
-          </div>
-          <div class="card">
-              <div id="video_demo"><video src=""></video></div>
-              <h4 id="titreProjet">Titre du projet</h4>
-              <p id="description">Description Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-              <button class="btn btn-mesProjets">En savoir plus</button>
-          </div>
-          <div class="card">
-              <div id="video_demo"><video src=""></video></div>
-              <h4 id="titreProjet">Titre du projet</h4>
-              <p id="description">Description Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-              <button class="btn btn-mesProjets">En savoir plus</button>
-          </div>
-        </div>
-      </section>
-      <section id="contact" class="reveal">
-        <h3>Contactez-moi</h3>
-        <p>
-          <i class="fa-solid fa-phone icon"></i> <span class="tel"> 0745308156</span><br>
-          <i class="fa-solid fa-envelope icon"></i><span class="mail"> maliksero.lafia@gmail.com</span>
-        </p>
-
-        <form class="contactForm" action="#">
-            <input type="text" id="nom" placeholder="Nom" required><br>
-            <input type="text" id="prenom" placeholder="Prénom" required><br>
-            <input type="email" id="email" placeholder="Email"  required><br>
-            <input type="textarea" id="message" placeholder="Écrivez votre message." required><br>
-            <button class="btn btn-contact">Envoyer</button>
-        </form>
-      </section>
-    </main>
-    <footer >
-        <button class="btn  btn-footer"><a href="cv_malik_lafia.pdf" download>Télécharger CV</a></button>
-        
-        <p class="socials">
-            <a href="https://github.com/maliklafia-dev"><i class="fa-brands fa-github icon"></i> </a>
-            <a href="https://www.linkedin.com/in/malik-lafia-8220871b7/"><i class="fa-brands fa-linkedin-in icon"></i> </a>
-        </p>
-        <ul class="siteMap" >
+      <header class="header">
+        <div class="header__call"><a href="tel:+33745308156"><i class="fa-solid fa-phone icon"></i></a></div>
+        <nav class="header__nav">
+          <ul class="header__ul">
             <li><a href="#home">Accueil</a></li>
             <li><a href="#about">A propos</a></li>
             <li><a href="#mesProjets">Mes projets</a></li>
             <li><a href="#contact">Contactez-moi</a></li>
-        </ul>
-        <p class="copyright">
-          <span>&copy; Tous droits Réservés <time id="year"></time></span>
-          <span>| Malik LAFIA </span>
-        </p>
-    </footer>
+          </ul>
+        </nav>
+        <button type="button" aria-label="toggle curtain navigation" class="header__nav-toggler">
+          <span class="line l1"></span>
+          <span class="line l2"></span>
+          <span class="line l3"></span>
+        </button>
+      </header>
+      <main>
+        <section id="home" class="accueil">
+          <div class="accueil__hero slide-left">
+            <p class="accueil__p nowrap animText">Bonjour !</p>
+            <p class="accueil__p nowrap">Je suis <strong>Malik LAFIA</strong>.</p>
+            <p class="accueil__p nowrap">Passionné par l'UI/UX design, </p>
+            <p class="accueil__p nowrap">le devéloppement web et mobile </p>
+            <p class="accueil__p nowrap">depuis bientôt 4 ans.</p>
+            
+            <button class="btn  accueil__btn" type="button"><a href="cv_malik_lafia.pdf" download>Télécharger CV</a></button>
+          </div>
+          <figure class="accueil__figure">
+            <figcaption class="offscreen">photo de Malik LAFIA</figcaption>
+            <img class="accueil__img growth" title="Malik LAFIA" src="images/malik_lafia_banner.png" width="433" height="577" alt="Malik LAFIA" />
+          </figure>
+        </section>
+        <section id="about" class="about">
+          <h3>A propos</h3>
+          <article class="about__info1">
+            <h2 class="about__h2">Qui suis-je ?</h2>
+            <p>
+              <ul class="identity">
+                <li>Nom: LAFIA</li>
+                <li>Prénoms: Malik Séro</li>
+                <li>Nationalité: Béninoise</li>
+              </ul>
+            </p>
+          </article>
+          <article class="about__info2">
+            <hr>
+            <h2 class="about__h2">Ma formation ?</h2>
+            <p>
+              <ul class="formation">
+                <li>Consultant Développeur web & mobile à <a href="https://www.institut-f2i.fr/">Institut Européen F2I Paris</a>(2023-2025)</li>
+                <li>Bachelor en Informatique de Gestion option Génie Logiciel à <a href="https://www.groupeiam.com/">IAM Dakar</a> (2019-2022)</li>
+                <li>Baccalauréat au CSJM Le FAUCON Abomey-Calavi (2017-2018)</li>
+              </ul>
+            </p>
+          </article>
+          <figure>
+            <img class="about__img growth" src="images/malik_lafia_about.png" title="Malik LAFIA" width="433" height="577" alt="Malik LAFIA">
+            <figcaption class="offscreen">photo à propo se de Malik LAFIA</figcaption>
+          </figure>
+          <button class="btn btn-about"><a href="cv_malik_lafia.pdf" download>Télécharger CV</a></button>
+        </section>
+        <section id="mesProjets" class="reveal">
+          <h3>Mes projets</h3>
+          <div class="media-scroller snaps-inline" id="projects-container">
+            <div class="card">
+              <div id="video_demo"><video src=""></video></div>
+              <h4 id="titreProjet">Titre du projet</h4>
+              <p id="description">Description Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <button class="btn btn-mesProjets">En savoir plus</button>
+            </div>
+            <div class="card">
+                <div id="video_demo"><video src=""></video></div>
+                <h4 id="titreProjet">Titre du projet</h4>
+                <p id="description">Description Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <button class="btn btn-mesProjets">En savoir plus</button>
+            </div>
+            <div class="card">
+                <div id="video_demo"><video src=""></video></div>
+                <h4 id="titreProjet">Titre du projet</h4>
+                <p id="description">Description Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <button class="btn btn-mesProjets">En savoir plus</button>
+            </div>
+            <div class="card">
+                <div id="video_demo"><video src=""></video></div>
+                <h4 id="titreProjet">Titre du projet</h4>
+                <p id="description">Description Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <button class="btn btn-mesProjets">En savoir plus</button>
+            </div>
+          </div>
+        </section>
+        <section id="contact" class="reveal">
+          <h3>Contactez-moi</h3>
+          <p>
+            <i class="fa-solid fa-phone icon"></i> <span class="tel"> 0745308156</span><br>
+            <i class="fa-solid fa-envelope icon"></i><span class="mail"> maliksero.lafia@gmail.com</span>
+          </p>
+  
+          <form class="contactForm" action="#">
+              <input type="text" id="nom" placeholder="Nom" required><br>
+              <input type="text" id="prenom" placeholder="Prénom" required><br>
+              <input type="email" id="email" placeholder="Email"  required><br>
+              <input type="textarea" id="message" placeholder="Écrivez votre message." required><br>
+              <button class="btn btn-contact">Envoyer</button>
+          </form>
+        </section>
+      </main>
+      <footer >
+          <button class="btn  btn-footer"><a href="cv_malik_lafia.pdf" download>Télécharger CV</a></button>
+          
+          <p class="socials">
+              <a href="https://github.com/maliklafia-dev"><i class="fa-brands fa-github icon"></i> </a>
+              <a href="https://www.linkedin.com/in/malik-lafia-8220871b7/"><i class="fa-brands fa-linkedin-in icon"></i> </a>
+          </p>
+          <ul class="siteMap" >
+              <li><a href="#home">Accueil</a></li>
+              <li><a href="#about">A propos</a></li>
+              <li><a href="#mesProjets">Mes projets</a></li>
+              <li><a href="#contact">Contactez-moi</a></li>
+          </ul>
+          <p class="copyright">
+            <span>&copy; Tous droits Réservés <time id="year"></time></span>
+            <span>| Malik LAFIA </span>
+          </p>
+      </footer>
   </body>
 </html>
